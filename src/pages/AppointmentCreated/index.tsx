@@ -1,6 +1,5 @@
 import React, { useCallback, useMemo } from 'react';
 import Icon from 'react-native-vector-icons/Feather';
-import { View } from 'react-native';
 
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { format } from 'date-fns';

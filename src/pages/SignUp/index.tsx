@@ -20,6 +20,12 @@ import { Container, Title, BackToSignIn, BackToSignInText } from './styles';
 import getValidationErrors from '../../utils/getValidationErrors';
 import api from '../../services/api';
 
+interface SignUpFormData {
+  name: string;
+  email: string;
+  password: string;
+}
+
 const SignUp: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
@@ -27,12 +33,6 @@ const SignUp: React.FC = () => {
   const passwordInputRef = useRef<TextInput>(null);
 
   const navigation = useNavigation();
-
-  interface SignUpFormData {
-    name: string;
-    email: string;
-    password: string;
-  }
 
   const handleSignUp = useCallback(
     async (data: SignUpFormData) => {
